@@ -11,10 +11,10 @@
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{--profile--}}
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
-                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-1.jpg') }}">
+                        <img alt="Image placeholder" src="{{ asset('/img/theme/team-1-800x800.jpg') }}">
                         </span>
                     </div>
                 </a>
@@ -92,12 +92,12 @@
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> {{--profile--}}
+                                <a class="nav-link" href="#">
                                     {{ __('User profile') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> {{--user--}}
+                                <a class="nav-link" href="#">
                                     {{ __('User Management') }}
                                 </a>
                             </li>
@@ -106,23 +106,23 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{--icons--}}
+                    <a class="nav-link" href="#">
                         <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">{{--map--}}
+                    <a class="nav-link" href="#">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Maps') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{--table--}}
+                    <a class="nav-link" href="#">
                       <i class="ni ni-bullet-list-67 text-default"></i>
                       <span class="nav-link-text">Tables</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{--register--}}
+                    <a class="nav-link" href="#">
                         <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
                     </a>
                 </li>
