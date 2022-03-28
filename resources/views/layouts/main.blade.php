@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Argon Dashboard') }}</title>
+        <title>{{ config('main.name', 'Sistema de Contratos') }}</title>
         <!-- Favicon -->
         <link href="{{ asset('/img/brand/favicon.png') }}" rel="icon" type="image/png">
         <!-- Fonts -->
@@ -43,6 +43,6 @@
         @stack('js')
 
         <!-- Argon JS -->
-        <script src="{{ asset('/js/argon.js?v=1.0.0') }}"></script>
+        {{--<script src="{{ asset('/js/argon.js?v=1.0.0') }}"></script>--}}
     </body>
 </html>
