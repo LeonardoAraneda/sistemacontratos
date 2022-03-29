@@ -1,55 +1,39 @@
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
-    <div class="container px-4">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('/img/brand/white.png') }}" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-collapse-main">
-            <!-- Collapse header -->
-            <div class="navbar-collapse-header d-md-none">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('/img/brand/blue.png') }}">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Navbar items -->
-            <ul class="navbar-nav ml-auto">
-                {{--<li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="{{ route('home') }}">
-                        <i class="ni ni-planet"></i>
-                        <span class="nav-link-inner--text">{{ __('Dashboard') }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="{{ route('register') }}">
-                        <i class="ni ni-circle-08"></i>
-                        <span class="nav-link-inner--text">{{ __('Register') }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="{{ route('login') }}">
-                        <i class="ni ni-key-25"></i>
-                        <span class="nav-link-inner--text">{{ __('Login') }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
-                        <i class="ni ni-single-02"></i>
-                        <span class="nav-link-inner--text">{{ __('Profile') }}</span>
-                    </a>
-                </li>
-            </ul>--}}
-        </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top text-white">
+  <div class="container">
+    <div class="navbar-wrapper">
+      <a class="navbar-brand" href="{{ route('home') }}">{{ $title }}</a>
     </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        {{--<li class="nav-item">
+          <a href="{{ route('home') }}" class="nav-link">
+            <i class="material-icons">dashboard</i> {{ __('Dashboard') }}
+          </a>
+        </li>
+        <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">
+          <a href="{{ route('register') }}" class="nav-link">
+            <i class="material-icons">person_add</i> {{ __('Register') }}
+          </a>
+        </li>
+        <li class="nav-item{{ $activePage == 'login' ? ' active' : '' }}">
+          <a href="{{ route('login') }}" class="nav-link">
+            <i class="material-icons">fingerprint</i> {{ __('Login') }}
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="#" class="nav-link">
+            <i class="material-icons">face</i> {{ __('Profile') }}
+          </a>
+        </li>--}}
+      </ul>
+    </div>
+  </div>
 </nav>
+<!-- End Navbar -->
