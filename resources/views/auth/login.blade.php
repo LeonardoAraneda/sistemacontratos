@@ -27,7 +27,7 @@
           </div>
           <div class="card-body">
             <p class="card-description text-center">{{ __('Recuerda ingresar correctamente tus ') }} <strong>datos</strong>  </p>
-            <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
+           <!-- <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -39,6 +39,22 @@
               @if ($errors->has('email'))
                 <div id="email-error" class="error text-danger pl-3" for="email" style="display: block;">
                   <strong>{{ $errors->first('email') }}</strong>
+                </div>
+              @endif
+            </div> -->
+            <!-- -->
+            <div class="bmd-form-group{{ $errors->has('rut') ? ' has-danger' : '' }}">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">fingerprint</i>
+                  </span>
+                </div>
+                <input type="text" name="rut" class="form-control" placeholder="{{ __('RUT...') }}" value="{{ old('rut', null) }}" required autocomplete="rut" autofocus>
+              </div>
+              @if ($errors->has('rut'))
+                <div id="rut-error" class="error text-danger pl-3" for="rut" style="display: block;">
+                  <strong>{{ $errors->first('rut') }}</strong>
                 </div>
               @endif
             </div>
