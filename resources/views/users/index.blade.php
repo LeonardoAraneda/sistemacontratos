@@ -12,7 +12,7 @@
                                     <p class="card-category">Usuarios registrados</p>
                                 </div>
                                 <div class="card-body">
-
+                                    hola mundo!
                                 </div>
                                 <div class="card-footer mr-auto">
 
