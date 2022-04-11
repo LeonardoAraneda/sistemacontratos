@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'usuarios', 'titlePage' => 'Usuarios'])
+@extends('layouts.main', ['activePage' => 'users', 'titlePage' => 'Usuarios'])
 @section('content')
     <div class="content">
         <div class="container-fuid">
@@ -41,12 +41,8 @@
                                                     <td>{{ $user->rut }}</td>
                                                     <td>{{ $user->created_at }}</td>
                                                     <td class="td-actions text-right">
-                                                        <button class="btn btn-sm btn-info" type="button">
-                                                            <i class="material-icons">person</i>
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning" type="button">
-                                                            <i class="material-icons">edit</i>
-                                                        </button>
+                                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
+                                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
                                                         <button class="btn btn-sm btn-danger" type="button">
                                                             <i class="material-icons">close</i>
                                                         </button>
