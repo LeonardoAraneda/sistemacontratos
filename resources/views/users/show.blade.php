@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <div class="card-title">Insertar Rol Usuario</div>
+                        <div class="card-title">{{ $user->rol }}</div>
                         <p class="card-category">Vista detallada del usuario {{ $user->name}}</p>
                        </div>
                        <!--Body-->
@@ -24,6 +24,7 @@
                                                    <p class="description">
                                                    {{ $user->rut}}  <br>
                                                    {{ $user->email}}  <br>
+                                                   {{ $user->area}}  <br> 
                                                    {{ $user->created_at}}  <br> 
                                                    </p>
                                                </div>

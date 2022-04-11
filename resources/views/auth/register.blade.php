@@ -56,6 +56,38 @@
                 </div>
               @endif
             </div>
+            <!-- ROL -->
+            <div class="bmd-form-group{{ $errors->has('rol') ? ' has-danger' : '' }} mt-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                      <i class="material-icons">manage_accounts</i>
+                  </span>
+                </div>
+                <input type="text" name="rol" class="form-control" placeholder="{{ __('ROL...') }}" value="{{ old('rol') }}" required autocomplete="rol">
+              </div>
+              @if ($errors->has('rol'))
+                <div id="rol-error" class="error text-danger pl-3" for="rol" style="display: block;">
+                  <strong>{{ $errors->first('rol') }}</strong>
+                </div>
+              @endif
+            </div>
+            <!-- AREA -->
+            <div class="bmd-form-group{{ $errors->has('area') ? ' has-danger' : '' }} mt-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                      <i class="material-icons">business_center</i>
+                  </span>
+                </div>
+                <input type="text" name="area" class="form-control" placeholder="{{ __('Area...') }}" value="{{ old('area') }}" required autocomplete="area">
+              </div>
+              @if ($errors->has('area'))
+                <div id="area-error" class="error text-danger pl-3" for="area" style="display: block;">
+                  <strong>{{ $errors->first('area') }}</strong>
+                </div>
+              @endif
+            </div>
             <!-- Email -->
             <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }} mt-3">
               <div class="input-group">
