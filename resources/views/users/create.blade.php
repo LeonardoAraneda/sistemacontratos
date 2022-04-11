@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <form action="{{route('users.store')}}" method="post" class="form-horizontal">
+                <form action="{{route('/home')}}" method="post" class="form-horizontal">
                     @csrf
                     <div class="card">
                         <div class="card-header card-header-primary">
