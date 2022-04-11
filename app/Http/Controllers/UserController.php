@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users=User::all();
+        $users=User::paginate(5);
         return view('users.index', compact('users'));
     }
 
@@ -25,7 +25,7 @@ class UserController extends Controller
             +[
                 'password' => bcrypt($request->input('password')),
             ]);
-        return redirect()->back();
+        return redirect()->action([UserController::class, 'index'])->with('success', 'Usuario creado correctamente.');
     }
 
 }

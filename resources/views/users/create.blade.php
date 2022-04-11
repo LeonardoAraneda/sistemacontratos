@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'users', 'titlePage' => 'Nuevo Usuario'])
+@extends('layouts.main', ['activePage' => 'usuarios', 'titlePage' => 'Nuevo Usuario'])
 @section('content')
 <div class="content">
     <div class="container-fluid">
@@ -8,7 +8,7 @@
                     @csrf
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h4 class="card-tittle">Usuario</h4>
+                            <h4 class="card-tittle">Crear Usuario</h4>
                             <p class="card-category">Ingresar datos</p>
                         </div>
                         <div class="card-body">
@@ -48,4 +48,6 @@
         </div>
     </div>
 </div>
+
+
 @endsection
