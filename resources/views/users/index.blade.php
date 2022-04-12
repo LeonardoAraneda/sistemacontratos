@@ -8,7 +8,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header card-header-primary">
-                                    <h4 class="card-tittle">Mostrar Usuario</h4>
+                                    <h4 class="card-tittle">Tablas de Usuario</h4>
                                     <p class="card-category">Datos de Usuario</p>
                                 </div>
                                 <div class="card-body">
@@ -19,7 +19,7 @@
                                     @endif
                                     <div class="row">
                                         <div class="col-12 text-right">
-                                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-danger">Añadir Usuario</a>
+                                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-facebook">Añadir Usuario</a>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
@@ -45,9 +45,13 @@
                                                     <td class="td-actions text-right">
                                                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
                                                         <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
-                                                        <button class="btn btn-sm btn-danger" type="button">
+                                                        <form action="{{route('users.delete', $user->id)}}" method="post" style="display: inline-block" onsubmit="return confirm('¿Estás seguro?')">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger" type="submit" rel="tooltip">
                                                             <i class="material-icons">close</i>
                                                         </button>
+                                                        </form>
                                                     </td>
                                                 </tr>
                                                 @endforeach

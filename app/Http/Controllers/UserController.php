@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserCreateRequest;
+use App\Http\Requests\UserEditRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -19,13 +21,21 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function store(Request $request)
+    public function store(UserCreateRequest $request)
     {
-        User::create($request->only('name', 'rut', 'email')
+        /* $request->validate
+        ([
+            'name' => 'required|max:25',
+            'rut' => 'required',
+            'rol' => 'required',
+            'area' => 'required',
+            'email' => 'required|email|unique:users',
+        ]); */
+        $user = User::create($request->only('name', 'rut','rol','area', 'email')
             +[
                 'password' => bcrypt($request->input('password')),
             ]);
-        return redirect()->action([UserController::class, 'index'])->with('success', 'Usuario creado correctamente.');
+        return redirect()->route('users.show', $user->id)->with('success', 'Usuario creado correctamente.');
     }
 
     public function Show(User $user)
@@ -42,20 +52,28 @@ class UserController extends Controller
         return view('users.edit', compact('user'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UserEditRequest $request, User $user)
     {
-        $user=User::findOrFail($id);
-        $data = $request->only('name','username','email');
-        if(trim($request->password)=='')
-        {
-            $data=$request->except('password');
-        }
-        else {
-            $data=$request->all();
-            $data['password']=bcrypt($request->password);
-        }
+        //$user=User::findOrFail($id);
+        $data = $request->only('name','rut','rol','area','email');
+        $password=$request->input('password');
+        if($password)
+            $data['password']=bcrypt($password);
+        //if(trim($request->password)=='')
+        //{
+        //    $data=$request->except('password');
+        //}
+        //else {
+        //    $data=$request->all();
+        //    $data['password']=bcrypt($request->password);
+        //}
         $user->update($data);
-        return redirect()->back();
+        return redirect()->route('users.show', $user->id)->with('success', 'Usuario actualizado correctamente');
     }
 
+    public function destroy(User $user)
+    {
+        $user -> delete();
+        return back()->with('success', 'Usuario eliminado correctamente');
+    }
 }
