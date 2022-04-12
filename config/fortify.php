@@ -33,7 +33,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Username / Email
+    | Username / Email/Rol/Area
     |--------------------------------------------------------------------------
     |
     | This value defines which model attribute should be considered as your
@@ -47,6 +47,8 @@ return [
     */
 
     'username' => 'rut',
+
+    'area' => 'area',
 
     'email' => 'email',
 
