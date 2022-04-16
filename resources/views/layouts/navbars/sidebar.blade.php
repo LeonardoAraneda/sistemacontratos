@@ -35,10 +35,10 @@
             <p>{{ __('Tipografía') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+      <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('permissions.index') }}">
           <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Icono') }}</p>
+          <p>{{ __('Permisos') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
