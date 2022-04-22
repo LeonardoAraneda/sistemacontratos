@@ -33,17 +33,6 @@
                                                     <td>{{ $permission->name }}</td>
                                                     <td>{{ $permission->guard_name }}</td>
                                                     <td>{{ $permission->created_at }}</td>
-                                                    <td class="td-actions text-right">
-                                                        <a href="{{ route('permisions.show', $permission->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
-                                                        <a href="{{ route('permisions.edit', $permission->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
-                                                        <form action="{{route('permissions.delete', $permission->id)}}" method="post" style="display: inline-block" onsubmit="return confirm('¿Estás seguro?')">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button class="btn btn-danger" type="submit" rel="tooltip">
-                                                            <i class="material-icons">close</i>
-                                                        </button>
-                                                        </form>
-                                                    </td>
                                                 </tr>
                                                 @empty
                                                 No permissions registered yet.
