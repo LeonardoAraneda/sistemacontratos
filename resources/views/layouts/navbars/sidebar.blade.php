@@ -42,9 +42,9 @@
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">location_ons</i>
-            <p>{{ __('Mapas') }}</p>
+        <a class="nav-link" href="{{ route('roles.index') }}">
+          <i class="material-icons">work_outline</i>
+            <p>{{ __('Roles') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
